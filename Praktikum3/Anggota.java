@@ -39,12 +39,19 @@ public class Anggota {
     }
 
     public void angsur(int jumlah) {
-        if (jumlahPinjaman == 0) {
-            System.out.println("Tidak ada pinjaman yang harus diangsur.");
-        } else if (jumlah > jumlahPinjaman) {
-            System.out.println("Maaf, jumlah angsuran melebihi jumlah pinjaman.");
-        } else {
-            jumlahPinjaman -= jumlah;
-        }
+    int minimalAngsuran = (int) (jumlahPinjaman * 0.10);
+
+    if (jumlahPinjaman == 0) {
+        System.out.println("Tidak ada pinjaman yang harus diangsur.");
+    } 
+    else if (jumlah < minimalAngsuran) {
+        System.out.println("Maaf, angsuran harus 10% dari jumlah pinjaman.");
+    } 
+    else if (jumlah > jumlahPinjaman) {
+        System.out.println("Maaf, jumlah angsuran melebihi jumlah pinjaman.");
+    } 
+    else {
+        jumlahPinjaman -= jumlah;
     }
+}
 }
