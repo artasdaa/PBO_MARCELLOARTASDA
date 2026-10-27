@@ -1,6 +1,6 @@
 package Jobsheet10;
 
-public class Hewan {
+public abstract class Hewan {
     public double berat;
     public String makanan;
     public String habitat;
@@ -11,13 +11,8 @@ public class Hewan {
         this.habitat = habitat;
     }
 
-    public void bergerak() {
-
-    }
-
-    public void bernapas() {
-        
-    }
+    public abstract void bergerak();
+    public abstract void bernapas();
 
     public void cetakInfo() {
         System.out.println("Berat   : " + this.berat);
