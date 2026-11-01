@@ -1,6 +1,6 @@
-package BarangElektronik;
+package BarangElektronik1;
 
-public class InheritanceDemo {
+public class MainDemo {
     public static void main(String[] args) {
 
         Radio radio1 = new Radio(
@@ -18,11 +18,14 @@ public class InheritanceDemo {
         System.out.println(radio1.getInfo());
         radio1.gantiSuara();
         radio1.aturVolume();
+        radio1.nyalakan();
 
         System.out.println();
 
         System.out.println(kamera1.getInfo());
         kamera1.memotret();
         kamera1.aturISO();
+        kamera1.nyalakan();
+
     }
 }
